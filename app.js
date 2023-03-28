@@ -21,7 +21,7 @@ function buildTable(data) {
       cell.text(val);
     });
   });
-}
+};
 
 // 1. Create a variable to keep track of all the filters as an object.
 var filters = {};
@@ -38,14 +38,13 @@ function updateFilters() {
   
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
-        if (inputValue) {
+            if (inputValue) {
           filters[inputID] = inputValue;
       } else{filters ={};};
   
     // 6. Call function to apply all filters and rebuild the table
     filterTable(filters);
-  
-  }
+  };
   
   // 7. Use this function to filter the table when data is entered.
   function filterTable(obj) {
@@ -55,7 +54,7 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    Object.entries(obj).forEach(([fkey, fval]) =>{
+        Object.entries(obj).forEach(([fkey, fval]) =>{
       filteredData = filteredData.filter((row) => row[fkey] === fval)
 
  });
